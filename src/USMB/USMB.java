@@ -42,6 +42,9 @@ public class USMB {
     }
 
 
+    public USMB() {
+        FillArray();
+    }
 
     public void FillArray(){
         batiments.add(new Batiment("bibliotheque"));
@@ -60,6 +63,21 @@ public class USMB {
         personnes.add(new Personne(2,"Telisson David", TYPE.PROFESSEUR, badges.get(2)));
         personnes.add(new Personne(3,"Wagner Isabelle", TYPE.PERSONNEL_ADMINISTRATIF, badges.get(3)));
         personnes.add(new Personne(4,"Hersemeule Hugo", TYPE.ETUDIANT, badges.get(4)));
+
+        batiments.get(0).getBadgesOuvrantBatiment().add(badges.get(0));
+        batiments.get(0).getBadgesOuvrantBatiment().add(badges.get(1));
+        batiments.get(0).getBadgesOuvrantBatiment().add(badges.get(2));
+
+        batiments.get(1).getBadgesOuvrantBatiment().add(badges.get(2));
+        batiments.get(1).getBadgesOuvrantBatiment().add(badges.get(3));
+
+        batiments.get(2).getBadgesOuvrantBatiment().add(badges.get(3));
+        batiments.get(2).getBadgesOuvrantBatiment().add(badges.get(4));
+
+        batiments.get(3).getBadgesOuvrantBatiment().add(badges.get(0));
+        batiments.get(3).getBadgesOuvrantBatiment().add(badges.get(1));
+        batiments.get(3).getBadgesOuvrantBatiment().add(badges.get(2));
+
 
 
 

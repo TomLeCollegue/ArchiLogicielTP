@@ -1,5 +1,7 @@
 package personnes;
 
+import batiment.Batiment;
+
 public class Personne {
 
     private int id;
@@ -51,6 +53,10 @@ public class Personne {
         this.name = name;
         this.type = type;
         this.badge = badge;
+    }
+
+    public void tenterEntree(Batiment batiment){
+        batiment.getPorte().TentativeEntrerBatiment(this) ;
     }
 }
 

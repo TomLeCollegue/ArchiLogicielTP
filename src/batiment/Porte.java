@@ -8,7 +8,7 @@ import personnes.Personne;
 
 public class Porte {
 
-    private int timerPorte = 5000;
+    private long timerPorte = 5000;
     private Batiment batiment;
     private int passageLaser = 0;
     private boolean estOuverte = false;
@@ -48,10 +48,10 @@ public class Porte {
         Thread t = new Thread() {
             public void run() {
                 try {
-                    wait(timerPorte);
+                    sleep(timerPorte);
                     estOuverte = false;
                     System.out.println("la porte est fermé après "+ timerPorte / 1000 + " secondes");
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
